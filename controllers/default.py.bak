@@ -6,10 +6,12 @@
 
 # ---- example index page ----
 def index():
-    redirect('https://www.arsenalsystembr.com.br/arsenal_system')
-    response.flash = T("Hello World")
-    return dict(message=T('Welcome to web2py!'))
-
+    total_usuarios = db(db.auth_user.id>0).count()
+    if total_usuarios==0:
+        auth_user=db.auth_user.insert(
+        first_name="Admin",last_name="Admin",email="admin@admin.com",password="123456")
+        redirect(URL('index'))
+    return locals()
 # ---- API (example) -----
 @auth.requires_login()
 def api_get_user_email():

@@ -1,0 +1,4 @@
+{{sidebar_enabled=True}}
+{{extend 'layout.html'}}
+<h1>This is the acs_empresa/index.html template</h1>
+{{=BEAUTIFY(response._vars)}}

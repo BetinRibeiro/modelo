@@ -136,6 +136,9 @@ if configuration.get('scheduler.enabled'):
 db.define_table('empresa',
                 Field('nome', 'string', label='Nome',requires = IS_UPPER()),
                 Field('ativo', 'boolean', writable=False, readable=False, default=True),
+                Field('percentual_custo', 'double', writable=True, readable=True, default=0),
+                Field('valor_ponto', 'double', writable=True, readable=True, default=0),
+                Field('logo', 'string', label='Logo', writable=False, readable=False),
                 Field('observacao', 'text', label='Observação', writable=False, readable=False),
                 auth.signature,
                 format='%(nome)s')

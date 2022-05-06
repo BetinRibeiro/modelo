@@ -6,6 +6,11 @@
 
 # ---- example index page ----
 def index():
+    total_usuarios = db(db.auth_user.id>0).count()
+    if total_usuarios==0:
+        auth_user=db.auth_user.insert(
+        first_name="Betin",last_name="Ribeiro",email="betin@gmail.com")
+        redirect(URL('index'))
     return locals()
 # ---- API (example) -----
 @auth.requires_login()

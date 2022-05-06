@@ -1,9 +1,12 @@
 {{extend 'layout.html'}}
 
 {{block header}}
-<div class="jumbotron jumbotron-fluid background" style="background-color: #333; color:white; padding:30px;word-wrap:break-word;">
+<div class="jumbotron jumbotron-fluid bg-dark background" style="padding:30px;word-wrap:break-word;">
   <div class="container center">
-    <h1 class="display-5">Modelo Arsenal System</h1>
+    <h1 class="display-5 text-light">Modelo Arsenal System</h1>
   </div>
 </div>
 {{end}}
+
+
+<a href="{{=URL('acs_empresa','index')}}" class="btn btn-lg btn-primary mx-1">Acessar</a>
