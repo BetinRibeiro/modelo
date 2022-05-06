@@ -1,0 +1,18 @@
+{{extend 'layout.html'}}
+<h1>This is the acs_empresa/index.html template</h1>
+{{=BEAUTIFY(response._vars)}}
+
+<div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card" >
+            <div class="card-header"> Cadastro </div>
+            <div class="card-body">
+              {{=form}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
